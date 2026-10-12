@@ -67,3 +67,37 @@
   window.addEventListener('popstate', fromHash);
   fromHash();
 })();
+
+// "Email me" opens a small menu, since a bare mailto link does nothing without a mail app set up.
+(function () {
+  var btn = document.getElementById('email-btn');
+  var menu = document.getElementById('email-menu');
+  var copy = document.getElementById('email-copy');
+  var address = 'agupta7@andrew.cmu.edu';
+
+  function setOpen(open) {
+    menu.hidden = !open;
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) menu.querySelector('a').focus();
+  }
+
+  btn.addEventListener('click', function () { setOpen(menu.hidden); });
+  document.addEventListener('click', function (e) {
+    if (!menu.hidden && !e.target.closest('.email')) setOpen(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !menu.hidden) { setOpen(false); btn.focus(); }
+  });
+
+  copy.addEventListener('click', function () {
+    function done() {
+      copy.textContent = 'Copied';
+      setTimeout(function () { copy.textContent = 'Copy address'; }, 1600);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(address).then(done, function () { window.prompt('Copy this address:', address); });
+    } else {
+      window.prompt('Copy this address:', address);
+    }
+  });
+})();
