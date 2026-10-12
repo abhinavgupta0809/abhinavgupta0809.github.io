@@ -11,3 +11,16 @@ Plain HTML, CSS and JS with no build step. GitHub Pages serves `main` from the r
 Preview locally: `python3 -m http.server 8770`, then open http://localhost:8770.
 
 To add a teardown, copy the `<article class="feature">` block under "Teardowns" in `index.html`.
+
+## CV PDF
+
+The PDF is built from the CV block in `index.html` (between the `cv:start` and `cv:end` comments). After editing the CV:
+
+```
+python3 tools/build-cv.py                      # writes cv.html
+python3 -m http.server 8770 &
+agent-browser open http://localhost:8770/cv.html
+agent-browser pdf assets/Abhinav-Gupta-CV.pdf  # check it's still one page
+```
+
+Screenshots and the photo live in `assets/`.

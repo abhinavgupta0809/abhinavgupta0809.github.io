@@ -20,7 +20,8 @@
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="hero">
-    <div class="wrap">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
       <p class="eyebrow">Product Manager · Carnegie Mellon MSPM '26</p>
       <h1>Abhinav Gupta</h1>
       <p class="lede">I've spent 5+ years building consumer products at Flipkart, Tata 1mg, Meesho and ShareChat, platforms with 400M+ users. Now I'm at Carnegie Mellon, and I build the AI products I write about: from PRD to a live app, with the evals to back the numbers.</p>
@@ -34,6 +35,10 @@
         <a class="btn" href="https://linkedin.com/in/abhinavgupta0809" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/abhinavgupta0809" target="_blank" rel="noopener">GitHub</a>
       </nav>
+      </div>
+      <figure class="hero-photo">
+        <img src="assets/abhinav-cmu.jpg" alt="Abhinav Gupta standing in front of the red CMU sign at Carnegie Mellon" width="900" height="1027">
+      </figure>
     </div>
   </header>
 
@@ -59,11 +64,15 @@
           <p>Most of the people I've built for were first-time and non-technical users, the ones most products quietly ignore. That's still what I care about: making AI simple enough that anyone can use it.</p>
           <p>Along the way I co-founded a food discovery app and co-owned a restaurant, so I've been the merchant as well as the PM building for one. At Carnegie Mellon I've gone all in on AI products. I specify, review and evaluate what I ship, and I'm open about where AI wrote the code.</p>
         </div>
-        <p class="meta-line">Pittsburgh, PA · Open to New York and San Francisco · Available January 2027</p>
+        <p class="meta-line">Based in Pittsburgh, PA · Open to roles anywhere in the US, and remote · Available January 2027</p>
       </div>
 
       <div class="block">
-        <h2>CV</h2>
+        <div class="cv-top">
+          <h2>CV</h2>
+          <a class="btn btn-dark" href="assets/Abhinav-Gupta-CV.pdf" download>Download CV (PDF)</a>
+        </div>
+        <!-- cv:start -->
 
         <h3 class="cv-head">Experience</h3>
 
@@ -165,6 +174,7 @@
         <ul class="chips">
           <li>SQL</li><li>Python</li><li>BigQuery</li><li>Looker</li><li>Mixpanel</li><li>Amplitude</li><li>A/B testing</li><li>Metric trees</li><li>Marketplace economics</li><li>LLM evals</li>
         </ul>
+        <!-- cv:end -->
       </div>
 
       <div class="block">
@@ -194,6 +204,7 @@
 
         <div class="cards">
           <article class="card" id="d-perplexity">
+            <a class="shot" href="https://perplexity-reviews-site.vercel.app" target="_blank" rel="noopener"><img src="assets/perplexity.jpg" alt="Perplexity app reviews dashboard, overview tab" width="960" height="600" loading="lazy"></a>
             <p class="tag live">Live</p>
             <h3>Perplexity</h3>
             <p class="big">14,791 <small>reviews labeled</small></p>
@@ -203,9 +214,11 @@
               <li>202 reviews come from paying users who ran out of credits.</li>
             </ul>
             <p class="links"><a href="https://perplexity-reviews-site.vercel.app" target="_blank" rel="noopener">Open dashboard</a><a href="https://github.com/abhinavgupta0809/perplexity-reviews" target="_blank" rel="noopener">Repo</a></p>
+            <p class="fine">Independent and unofficial. Not affiliated with Perplexity.</p>
           </article>
 
           <article class="card" id="d-claude">
+            <a class="shot" href="https://anthropic-reviews-site.vercel.app" target="_blank" rel="noopener"><img src="assets/claude.jpg" alt="Claude app reviews dashboard, overview tab" width="960" height="600" loading="lazy"></a>
             <p class="tag live">Live</p>
             <h3>Claude app</h3>
             <p class="big">26,000 <small>reviews labeled</small></p>
@@ -219,6 +232,7 @@
           </article>
 
           <article class="card" id="d-indeed">
+            <a class="shot" href="https://github.com/abhinavgupta0809/indeed-reviews" target="_blank" rel="noopener"><img src="assets/indeed.jpg" alt="Indeed app reviews dashboard, overview tab" width="960" height="600" loading="lazy"></a>
             <p class="tag">Repo public · site not deployed yet</p>
             <h3>Indeed Job Search</h3>
             <p class="big">46,454 <small>reviews labeled</small></p>
@@ -242,6 +256,7 @@
             <p class="tag live">Live</p>
             <h3>Perplexity: what did that run cost me?</h3>
           </div>
+          <a class="shot" href="https://run-receipt-two.vercel.app/receipt" target="_blank" rel="noopener"><img src="assets/run-receipt-prototype.jpg" alt="Run Receipt prototype showing a cost range before a run is sent" width="960" height="600" loading="lazy"></a>
           <ol class="steps">
             <li>
               <h4>The signal</h4>
@@ -271,6 +286,7 @@
             <p class="tag">Cent Capital internship · Summer 2026</p>
             <h3>VaultLedger: the finding was the failed experiments</h3>
           </div>
+          <a class="shot" href="https://abhinavgupta0809.github.io/vaultledger-presentation/" target="_blank" rel="noopener"><img src="assets/vault.jpg" alt="Title slide of the VaultLedger final presentation" width="960" height="600" loading="lazy"></a>
           <div class="prose">
             <p>VaultLedger answers plain-English questions about financial documents such as bank statements, invoices and pay stubs. It runs fully on the device, quotes its source for every answer, and refuses when it can't find support. With someone's taxes, a confidently wrong number is worse than no answer.</p>
           </div>
@@ -297,6 +313,8 @@
 
         <div class="builds">
           <article class="build" id="b-civic">
+            <a class="shot" href="https://civic-signal.replit.app" target="_blank" rel="noopener"><img src="assets/civic.jpg" alt="CivicSignal home screen with an article link field and an Analyze button" width="960" height="600" loading="lazy"></a>
+            <div class="build-body">
             <div class="build-head">
               <h3>CivicSignal</h3>
               <p class="tag live">Live</p>
@@ -306,9 +324,12 @@
             <p class="origin">Built solo at the Claude Builders Club hackathon.</p>
             <ul class="chips"><li>Next.js 15</li><li>TypeScript</li><li>Tailwind</li><li>Claude API</li><li>Chrome extension</li></ul>
             <p class="links"><a href="https://civic-signal.replit.app" target="_blank" rel="noopener">Try it live</a><a href="https://github.com/abhinavgupta0809/civic-signal" target="_blank" rel="noopener">Repo</a></p>
+            </div>
           </article>
 
           <article class="build" id="b-atelier">
+            <a class="shot" href="https://calorie-tracker-app-v2.replit.app" target="_blank" rel="noopener"><img src="assets/atelier.jpg" alt="Atelier Health onboarding screen showing BMI and a daily calorie target" width="960" height="600" loading="lazy"></a>
+            <div class="build-body">
             <div class="build-head">
               <h3>Atelier Health</h3>
               <p class="tag live">Live prototype</p>
@@ -318,9 +339,12 @@
             <p class="origin">Designed, built and deployed solo, from PRD to production. Next on the list: evals for estimate accuracy, and per-user sign-in.</p>
             <ul class="chips"><li>OpenAI API</li><li>Cursor</li><li>Replit</li></ul>
             <p class="links"><a href="https://calorie-tracker-app-v2.replit.app" target="_blank" rel="noopener">Try it live</a><a href="https://github.com/abhinavgupta0809/calorie-tracker-app" target="_blank" rel="noopener">Repo</a></p>
+            </div>
           </article>
 
           <article class="build" id="b-rescue">
+            <a class="shot" href="https://github.com/abhinavgupta0809/RescueMesh" target="_blank" rel="noopener"><img src="assets/rescuemesh.jpg" alt="RescueMesh command center with a Pittsburgh operating map, incidents and resource availability" width="960" height="600" loading="lazy"></a>
+            <div class="build-body">
             <div class="build-head">
               <h3>RescueMesh</h3>
               <p class="tag">Hackathon prototype · synthetic data</p>
@@ -330,9 +354,12 @@
             <p class="origin">Built at HackCMU, September 2026. Exercise only: all data is synthetic and it isn't for real dispatch.</p>
             <ul class="chips"><li>TypeScript</li><li>React</li><li>Gemini API</li><li>Claude Code</li><li>Codex</li></ul>
             <p class="links"><a href="https://github.com/abhinavgupta0809/RescueMesh" target="_blank" rel="noopener">Repo</a></p>
+            </div>
           </article>
 
           <article class="build" id="b-receipt">
+            <a class="shot" href="https://run-receipt-two.vercel.app" target="_blank" rel="noopener"><img src="assets/run-receipt.jpg" alt="Run Receipt home page with one agent run shown as a receipt" width="960" height="600" loading="lazy"></a>
+            <div class="build-body">
             <div class="build-head">
               <h3>Run Receipt</h3>
               <p class="tag live">Live prototype</p>
@@ -341,9 +368,12 @@
             <p>Shows what a run cost, where it ran, and whether its numbers check out. It grew out of the credit complaints in my Perplexity reviews dashboard, and the site carries the case study alongside the working prototype.</p>
             <ul class="chips"><li>Next.js</li><li>Chart.js</li><li>Vercel</li></ul>
             <p class="links"><a href="https://run-receipt-two.vercel.app" target="_blank" rel="noopener">Try it live</a><a href="https://github.com/abhinavgupta0809/run-receipt" target="_blank" rel="noopener">Repo</a></p>
+            </div>
           </article>
 
           <article class="build" id="b-vault">
+            <a class="shot" href="https://abhinavgupta0809.github.io/vaultledger-presentation/" target="_blank" rel="noopener"><img src="assets/vault.jpg" alt="Title slide of the VaultLedger final presentation" width="960" height="600" loading="lazy"></a>
+            <div class="build-body">
             <div class="build-head">
               <h3>VaultLedger</h3>
               <p class="tag">Internship build · not production-ready</p>
@@ -353,6 +383,7 @@
             <p class="origin">Built as sole product owner at Cent Capital, Summer 2026.</p>
             <ul class="chips"><li>RAG</li><li>Hybrid retrieval</li><li>Ollama</li><li>LLM evals</li></ul>
             <p class="links"><a href="https://abhinavgupta0809.github.io/vaultledger-presentation/" target="_blank" rel="noopener">Open the presentation</a><a href="#pm" data-jump="case-vaultledger">Read the case study</a></p>
+            </div>
           </article>
         </div>
       </div>
