@@ -353,3 +353,11 @@ h3 { margin: 0; font: 600 20px/1.3 var(--serif); color: var(--ink); text-wrap: p
   :root { --bg: #fff; }
   .work-card, .row, .principles li, .path li { break-inside: avoid; }
 }
+
+/* ---------- Company marks on the home page (case cards and the Path) ---------- */
+.logo-sm { display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; height: 22px; padding: 0 4px; margin-right: 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); transform: translateY(-1px); }
+.logo-sm img { display: block; height: 16px; width: auto; border-radius: 3px; }
+.logo-sm.wide img { height: 11px; padding: 0 3px; }
+.path-role .logo-sm { height: 24px; margin-right: 10px; }
+.path-role .logo-sm img { height: 18px; }
+.path-role .logo-sm.wide img { height: 12px; }
