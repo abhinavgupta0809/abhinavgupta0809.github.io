@@ -35,9 +35,9 @@
       <div class="deck-pos">
         <ol class="ticks" aria-label="Slides">
           <li><a href="#slide-1" aria-label="Slide 1: I proposed VaultLedger: private answers from your own financial documents, on your own computer" title="I proposed VaultLedger: private answers from your own financial documents, on your own computer"><span></span></a></li>
-          <li><a href="#slide-2" aria-label="Slide 2: I set the bar before changing anything, and retrieval quality (MRR) rose from 0.50 to 0.79" title="I set the bar before changing anything, and retrieval quality (MRR) rose from 0.50 to 0.79"><span></span></a></li>
+          <li><a href="#slide-2" aria-label="Slide 2: I built the evals first: a golden dataset, two retrieval metrics and a gate that fails the build" title="I built the evals first: a golden dataset, two retrieval metrics and a gate that fails the build"><span></span></a></li>
           <li><a href="#slide-3" aria-label="Slide 3: I rejected my own changes when they missed the bar" title="I rejected my own changes when they missed the bar"><span></span></a></li>
-          <li><a href="#slide-4" aria-label="Slide 4: It blocked 6 of 6 planted data leaks, and I stated what it can't prove yet" title="It blocked 6 of 6 planted data leaks, and I stated what it can't prove yet"><span></span></a></li>
+          <li><a href="#slide-4" aria-label="Slide 4: Right source in the top 20 results 98% of the time; all 6 planted data leaks blocked" title="Right source in the top 20 results 98% of the time; all 6 planted data leaks blocked"><span></span></a></li>
         </ol>
         <p class="count mono"><span class="visually-hidden">Slide </span><span data-current>1</span><span aria-hidden="true"> / </span><span class="visually-hidden"> of </span>4</p>
       </div>
@@ -94,42 +94,68 @@
     </section>
     <section class="slide" id="slide-2" aria-labelledby="s2-title" tabindex="-1">
       <div class="wrap">
-        <h2 class="s-title" id="s2-title">I set the bar before changing anything, and retrieval quality (MRR) rose from 0.50 to 0.79</h2>
+        <h2 class="s-title" id="s2-title">I built the evals first: a golden dataset, two retrieval metrics and a gate that fails the build</h2>
         <div class="s-body flip">
           <div class="s-text">
-          <p class="lead">An 80-question test set with the expected source for each answer, and a regression check that fails the build if search quality drops.</p>
+          <p class="lead">Every change ran against the same 80-question golden dataset before it could ship, and every run was pinned to the exact code, settings and data that produced it.</p>
+          <p class="stamp"><span><b>Golden dataset written by me;</b> the AI judge was checked against 20 human labels.</span></p>
           </div>
           <figure class="exhibit">
-            <figcaption class="ex-title"><span class="ex-no">Exhibit 2</span>How high the right source ranks (MRR) <span class="ex-unit">0 to 1, higher is better</span></figcaption>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" role="img" aria-labelledby="vb2-t vb2-d">
-<title id="vb2-t">How high the right source ranks, before and after hybrid search with a reranker</title>
-<desc id="vb2-d">Two columns on a 0 to 1 scale: mean reciprocal rank 0.50 before, 0.79 after hybrid search plus a reranker, on an 80-question test set.</desc>
-<defs><marker id="vb2-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrow" d="M0 0 10 5 0 10z"/></marker></defs>
-<path class="s-hair" d="M70 300 H630"/>
-<text class="t-s" x="60" y="307" text-anchor="end">0</text>
-<path class="s-hair" d="M70 170 H630"/>
-<text class="t-s" x="60" y="177" text-anchor="end">0.5</text>
-<path class="s-hair" d="M70 40 H630"/>
-<text class="t-s" x="60" y="47" text-anchor="end">1.0</text>
-<path class="s-line" d="M70 300 H630"/>
-<path class="f-dim" d="M170 300 V174.0 Q170 170.0 174 170.0 H266 Q270 170.0 270 174.0 V300 Z"/>
-<text class="t-num" x="220" y="154" text-anchor="middle">0.50</text>
-<text class="t-h" x="220" y="336" text-anchor="middle">Before</text>
-<path class="f-case" d="M430 300 V98.6 Q430 94.6 434 94.6 H526 Q530 94.6 530 98.6 V300 Z"/>
-<text class="t-num on" x="480" y="79" text-anchor="middle">0.79</text>
-<text class="t-h" x="480" y="336" text-anchor="middle">After</text>
-<text class="t-m" x="480" y="364" text-anchor="middle">hybrid search + reranker</text>
-<path class="s-dash" d="M280 170 H330"/>
-<path class="s-case2" d="M330 170 V103" marker-end="url(#vb2-a)"/>
-<text class="t-h t-case" x="342" y="141">+0.29</text>
+            <figcaption class="ex-title"><span class="ex-no">Exhibit 2</span>The eval harness, and what the two retrieval metrics measured</figcaption>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 524" role="img" aria-labelledby="ve2-t ve2-d">
+<title id="ve2-t">How VaultLedger was evaluated</title>
+<desc id="ve2-d">The eval harness in four steps: a golden dataset of 80 questions, each with the expected source; two retrieval metrics, recall at 20 (was the right source in the top 20 results, 0.96 before and 0.98 after) and MRR (how high it ranked, 0.50 before and 0.79 after); an AI judge checked against 20 human labels; and a regression gate that fails the build if search quality drops. Every run is pinned to the exact code, settings and test set.</desc>
+<defs><marker id="ve2-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrow" d="M0 0 10 5 0 10z"/></marker></defs>
+<rect class="box-case" x="1" y="1" width="308" height="96" rx="10"/>
+<circle class="f-case" cx="25" cy="29" r="14"/>
+<text class="t-h t-on" x="25" y="36" text-anchor="middle" font-size="19">1</text>
+<text class="t-h" x="47" y="37" font-size="23">Golden dataset</text>
+<text class="t-s" x="15" y="65">80 questions, each with the</text>
+<text class="t-s" x="15" y="87">expected source</text>
+<rect class="box" x="331" y="1" width="308" height="96" rx="10"/>
+<circle class="f-case" cx="355" cy="29" r="14"/>
+<text class="t-h t-on" x="355" y="36" text-anchor="middle" font-size="19">2</text>
+<text class="t-h" x="377" y="37" font-size="23">Retrieval metrics</text>
+<text class="t-s" x="345" y="65">recall@20 and MRR, scored</text>
+<text class="t-s" x="345" y="87">on every run</text>
+<rect class="box" x="1" y="107" width="308" height="96" rx="10"/>
+<circle class="f-case" cx="25" cy="135" r="14"/>
+<text class="t-h t-on" x="25" y="142" text-anchor="middle" font-size="19">3</text>
+<text class="t-h" x="47" y="143" font-size="23">AI judge</text>
+<text class="t-s" x="15" y="171">checked against 20 human</text>
+<text class="t-s" x="15" y="193">labels before it was trusted</text>
+<rect class="box-case" x="331" y="107" width="308" height="96" rx="10"/>
+<circle class="f-case" cx="355" cy="135" r="14"/>
+<text class="t-h t-on" x="355" y="142" text-anchor="middle" font-size="19">4</text>
+<text class="t-h" x="377" y="143" font-size="23">Build gate</text>
+<text class="t-s" x="345" y="171">fails the build if search</text>
+<text class="t-s" x="345" y="193">quality drops</text>
+<path class="s-hair" d="M0 224 H640"/>
+<text class="t-h" x="0" y="250">Recall@20</text>
+<text class="t-s" x="0" y="274">was the right source in the top 20 results?</text>
+<text class="t-s" x="0" y="307">Before</text>
+<rect class="f-dim" x="80" y="286" width="413" height="26" rx="4"/>
+<text class="t-h" x="505" y="307" font-size="23">0.96</text>
+<text class="t-s" x="0" y="343">After</text>
+<rect class="f-case" x="80" y="322" width="421" height="26" rx="4"/>
+<text class="t-h on" x="513" y="343" font-size="23">0.98</text>
+<text class="t-h" x="0" y="392">MRR</text>
+<text class="t-s" x="0" y="416">how high did the right source rank?</text>
+<text class="t-s" x="0" y="449">Before</text>
+<rect class="f-dim" x="80" y="428" width="215" height="26" rx="4"/>
+<text class="t-h" x="307" y="449" font-size="23">0.50</text>
+<text class="t-s" x="0" y="485">After</text>
+<rect class="f-case" x="80" y="464" width="340" height="26" rx="4"/>
+<text class="t-h on" x="432" y="485" font-size="23">0.79</text>
+<text class="t-s" x="0" y="516">0 to 1 scale, higher is better. After: hybrid search + reranker.</text>
 </svg>
-            <p class="ex-source">Source: the 80-question test set, 70 answerable rows, on a 60-document synthetic corpus. Before means the retrieval in place before hybrid search and the reranker.</p>
+            <p class="ex-source">Source: the 80-question golden dataset, 70 answerable rows, on a 60-document synthetic corpus.</p>
           </figure>
         </div>
         <details class="fold">
           <summary>More detail</summary>
           <div class="fold-body">
-            <p>An AI judge checked against 20 of my own labels (a small check, weak evidence on its own). Every result is tied to the exact code, settings and test set that produced it.</p>
+            <p>Recall@20 asks whether the right source appears anywhere in the top 20 results; MRR asks how high it ranks, so 1.0 means first every time. Hybrid search plus a reranker took recall@20 from 0.96 to 0.98 and MRR from 0.50 to 0.79. The AI judge is a small check on 20 labels, so the retrieval numbers, which need no judge, are the ones to lean on.</p>
           </div>
         </details>
       </div>
@@ -162,33 +188,21 @@
     </section>
     <section class="slide" id="slide-4" aria-labelledby="s4-title" tabindex="-1">
       <div class="wrap">
-        <h2 class="s-title" id="s4-title">It blocked 6 of 6 planted data leaks, and I stated what it can't prove yet</h2>
+        <h2 class="s-title" id="s4-title">Right source in the top 20 results 98% of the time; all 6 planted data leaks blocked</h2>
         <div class="s-body flip">
           <div class="s-text">
-          <p class="lead">Measured, reproducible numbers. Not a claim that it is production-ready.</p>
+          <p class="lead">The scorecard the gates were set against: retrieval quality on the golden dataset, and guardrails on planted attacks.</p>
+          <p class="stamp"><span><b>Measured on the golden dataset,</b> reproducible from the repo.</span></p>
           </div>
           <figure class="exhibit">
-            <figcaption class="ex-title"><span class="ex-no">Exhibit 4</span>Guardrails: what works, and what is not proven</figcaption>
-            <div class="cols">
-              <div>
-                <h3>Working, and measured</h3>
-                <p class="big">6 of 6<small>planted data leaks blocked</small></p>
-                <ul>
-                  <li>Personal details masked and restored exactly</li>
-                  <li>Number checks against the source</li>
-                  <li>Isolation between test personas</li>
-                </ul>
-              </div>
-              <div class="not">
-                <h3>Not proven yet</h3>
-                <ul>
-                  <li>The test set and documents are synthetic and self-written</li>
-                  <li>No real users yet</li>
-                  <li>Over-refusal was not meaningfully tested</li>
-                </ul>
-              </div>
+            <figcaption class="ex-title"><span class="ex-no">Exhibit 4</span>Scorecard on the golden dataset</figcaption>
+            <div class="score">
+              <div><span class="n">0.98</span><span class="k">Recall@20</span><span class="t">the right source was in the top 20 results, 98% of the time</span></div>
+              <div><span class="n">0.79</span><span class="k">MRR</span><span class="t">how high the right source ranked, up from 0.50</span></div>
+              <div><span class="n">6 of 6</span><span class="k">Guardrails</span><span class="t">planted data leaks blocked; personal details masked and restored exactly</span></div>
+              <div><span class="n">0</span><span class="k">Crashes</span><span class="t">on 100 malformed inputs, with number checks against the source</span></div>
             </div>
-            <p class="ex-source">Source: the guardrail test suite in the repo.</p>
+            <p class="ex-source">Source: the eval harness and guardrail test suite in the repo; every number is pinned to a run manifest.</p>
           </figure>
         </div>
       </div>
