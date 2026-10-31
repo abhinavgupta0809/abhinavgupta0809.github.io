@@ -28,7 +28,10 @@
 
   <nav class="topbar deckbar" aria-label="Case study">
     <div class="wrap">
-      <a class="back" href="../#work"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg><span class="back-label">All work</span></a>
+      <div class="deck-left">
+        <a class="back" href="../#work"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg><span class="back-label">All work</span></a>
+        <span class="brand-chip wide"><img src="../assets/logos/flipkart.svg" alt="" height="26"><span class="brand-name">Flipkart</span></span>
+      </div>
       <div class="deck-pos">
         <ol class="ticks" aria-label="Slides">
           <li><a href="#slide-1" aria-label="Slide 1: Flipkart Black reached 500K paid members four months after a relaunch I researched, positioned and targeted" title="Flipkart Black reached 500K paid members four months after a relaunch I researched, positioned and targeted"><span></span></a></li>
@@ -39,7 +42,7 @@
         <p class="count mono"><span class="visually-hidden">Slide </span><span data-current>1</span><span aria-hidden="true"> / </span><span class="visually-hidden"> of </span>4</p>
       </div>
       <div class="deck-right">
-        <a class="next" href="../meesho/">Next<span class="next-name">: Meesho</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="next" href="../meesho/"><span class="next-logo square"><img src="../assets/logos/meesho.png" alt="" height="20"></span>Next<span class="next-name">: Meesho</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg></button>
       </div>
     </div>
@@ -49,26 +52,11 @@
     <section class="slide" id="slide-1" aria-labelledby="s1-title" tabindex="-1">
       <div class="wrap">
         <h2 class="s-title" id="s1-title">Flipkart Black reached <b class="num">500K</b> paid members four months after a relaunch I researched, positioned and targeted</h2>
-        <p class="role"><b>Flipkart (Walmart)</b> · Product Manager, Loyalty · <span class="nw">Dec 2024 to Jan 2026</span></p>
+        <div class="s-sub"><span class="logo logo-big wide"><img src="../assets/logos/flipkart.svg" alt="Flipkart logo" height="44"></span><p class="role"><b>Flipkart (Walmart)</b> · Product Manager, Loyalty · <span class="nw">Dec 2024 to Jan 2026</span></p></div>
         <div class="s-body">
           <div class="s-text">
-          <p class="lead">Flipkart's premium paid membership, relaunched in place of an earlier premium tier. I was one product manager on a large loyalty team.</p>
-          <div class="ledger">
-            <div>
-              <h3>What I owned</h3>
-              <ul>
-                <li>User research</li>
-                <li>Positioning</li>
-                <li>Segmentation and targeting</li>
-                <li>Launch tracking</li>
-                <li>The data case for partner benefits</li>
-              </ul>
-            </div>
-            <div class="not">
-              <h3>Not mine</h3>
-              <p>Pricing and eligibility sat above me. I gave input on the launch price and built the segmentations behind the eligibility call.</p>
-            </div>
-          </div>
+          <p class="lead">Flipkart's premium paid membership, relaunched in place of an earlier tier. I was one PM on a large loyalty team.</p>
+          <p class="chips"><span class="chip-k">Owned</span><span class="chip">User research</span><span class="chip">Positioning</span><span class="chip">Segmentation and targeting</span><span class="chip">Launch tracking</span><span class="chip">Partner data case</span><span class="chip-k not">Not mine</span><span class="chip not">Pricing</span><span class="chip not">Eligibility</span></p>
           <p class="stamp"><span><b>Launch and adoption counts,</b> not a controlled test.</span></p>
           </div>
           <figure class="exhibit">
@@ -90,6 +78,12 @@
             <p class="ex-source">Source: the launch tracking dashboards I built. Numbers are rounded.</p>
           </figure>
         </div>
+        <details class="fold">
+          <summary>More detail</summary>
+          <div class="fold-body">
+            <p>Pricing and eligibility sat above me. I gave input on the launch price and built the segmentations behind the eligibility call.</p>
+          </div>
+        </details>
       </div>
     </section>
     <section class="slide" id="slide-2" aria-labelledby="s2-title" tabindex="-1">
@@ -97,8 +91,7 @@
         <h2 class="s-title" id="s2-title">Members didn't connect with the old tier, so I positioned the relaunch around a name they knew</h2>
         <div class="s-body">
           <div class="s-text">
-          <p class="lead">The earlier tier wasn't landing, and it had no video benefit to set against rival memberships.</p>
-          <p>I ran the user study on naming. “Black” resonated because people already knew it from Uber Black and Swiggy Black, so I positioned the relaunch around the name the study picked.</p>
+          <p class="lead">My naming study: people already knew “Black” from Uber Black and Swiggy Black, so the relaunch took that name.</p>
           </div>
           <figure class="exhibit">
             <figcaption class="ex-title"><span class="ex-no">Exhibit 2</span>What changed from the earlier tier to Black</figcaption>
@@ -113,6 +106,12 @@
             <p class="ex-source">Source: my user study on naming and the relaunch scope. Cap values not shown.</p>
           </figure>
         </div>
+        <details class="fold">
+          <summary>More detail</summary>
+          <div class="fold-body">
+            <p>The earlier tier wasn't landing, and it had no video benefit to set against rival memberships. I ran the user study on naming and positioned the relaunch around the name it picked.</p>
+          </div>
+        </details>
       </div>
     </section>
     <section class="slide" id="slide-3" aria-labelledby="s3-title" tabindex="-1">
@@ -120,11 +119,10 @@
         <h2 class="s-title" id="s3-title">My segmentation chose who saw the checkout upsell, and I read the launch from day one</h2>
         <div class="s-body">
           <div class="s-text">
-          <p class="lead">The checkout upsell showed shoppers what Black would save on the order in front of them. My analysis chose who saw it.</p>
+          <p class="lead">The upsell showed shoppers what Black would save on the order in front of them. My analysis chose who saw it.</p>
           <aside class="decision" aria-label="The call">
             <h3>The call</h3>
             <p class="call">Show the checkout upsell to the shoppers my analysis picked.</p>
-            <p class="call-note">No data pipeline was ready at launch, so I built the tracking in the tool that existed and read the launch from day one.</p>
           </aside>
           </div>
           <figure class="exhibit">
@@ -166,6 +164,12 @@
             <p class="ex-source">Source: launch plan. Illustration, redrawn. Not the product UI.</p>
           </figure>
         </div>
+        <details class="fold">
+          <summary>More detail</summary>
+          <div class="fold-body">
+            <p>I defined the target segments and designed the landing page and the push, email and WhatsApp notifications. No data pipeline was ready at launch, so I built the tracking in the tool that existed and read the launch from day one.</p>
+          </div>
+        </details>
       </div>
     </section>
     <section class="slide" id="slide-4" aria-labelledby="s4-title" tabindex="-1">
@@ -173,7 +177,7 @@
         <h2 class="s-title" id="s4-title">I built the partner data case; YouTube Premium launched on Black and hit <b class="num">350K</b> activations in three months</h2>
         <div class="s-body">
           <div class="s-text">
-          <p class="lead">I built the data case shown to Google and Netflix. YouTube Premium launched as a Black benefit, and Netflix followed later as a second benefit.</p>
+          <p class="lead">I built the data case shown to Google and Netflix. YouTube Premium launched first; Netflix followed as a second benefit.</p>
           <p class="stamp"><span><b>350K is YouTube Premium only.</b> The data case was mine; the partnership was a team result.</span></p>
           </div>
           <figure class="exhibit">

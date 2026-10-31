@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VaultLedger case study | Abhinav Gupta</title>
-  <meta name="description" content="VaultLedger: an on-device AI assistant for financial documents I proposed, scoped and built at Cent Capital, with preset release gates. Retrieval MRR 0.50 to 0.79; open-sourced by Cent Capital.">
+  <meta name="description" content="VaultLedger: a private AI assistant that answers from your own financial documents, on your own computer. I proposed, scoped and built it at Cent Capital with preset release gates.">
   <meta property="og:title" content="VaultLedger case study | Abhinav Gupta">
-  <meta property="og:description" content="VaultLedger: an on-device AI assistant for financial documents I proposed, scoped and built at Cent Capital, with preset release gates. Retrieval MRR 0.50 to 0.79; open-sourced by Cent Capital.">
+  <meta property="og:description" content="VaultLedger: a private AI assistant that answers from your own financial documents, on your own computer. I proposed, scoped and built it at Cent Capital with preset release gates.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://abhinavgupta0809.github.io/vaultledger/">
   <meta property="og:image" content="https://abhinavgupta0809.github.io/assets/og-vaultledger.png">
@@ -28,10 +28,13 @@
 
   <nav class="topbar deckbar" aria-label="Case study">
     <div class="wrap">
-      <a class="back" href="../#work"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg><span class="back-label">All work</span></a>
+      <div class="deck-left">
+        <a class="back" href="../#work"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg><span class="back-label">All work</span></a>
+        <span class="brand-chip square"><img src="../assets/logos/cent-capital.png" alt="" height="26"><span class="brand-name">Cent Capital</span></span>
+      </div>
       <div class="deck-pos">
         <ol class="ticks" aria-label="Slides">
-          <li><a href="#slide-1" aria-label="Slide 1: Investment advice stalled on regulation, so I proposed a narrower AI product that answers from your own documents" title="Investment advice stalled on regulation, so I proposed a narrower AI product that answers from your own documents"><span></span></a></li>
+          <li><a href="#slide-1" aria-label="Slide 1: I proposed VaultLedger: private answers from your own financial documents, on your own computer" title="I proposed VaultLedger: private answers from your own financial documents, on your own computer"><span></span></a></li>
           <li><a href="#slide-2" aria-label="Slide 2: I set the bar before changing anything, and retrieval quality (MRR) rose from 0.50 to 0.79" title="I set the bar before changing anything, and retrieval quality (MRR) rose from 0.50 to 0.79"><span></span></a></li>
           <li><a href="#slide-3" aria-label="Slide 3: I rejected my own changes when they missed the bar" title="I rejected my own changes when they missed the bar"><span></span></a></li>
           <li><a href="#slide-4" aria-label="Slide 4: It blocked 6 of 6 planted data leaks, and I stated what it can't prove yet" title="It blocked 6 of 6 planted data leaks, and I stated what it can't prove yet"><span></span></a></li>
@@ -39,7 +42,7 @@
         <p class="count mono"><span class="visually-hidden">Slide </span><span data-current>1</span><span aria-hidden="true"> / </span><span class="visually-hidden"> of </span>4</p>
       </div>
       <div class="deck-right">
-        <a class="next" href="../flipkart-black/">Next<span class="next-name">: Flipkart Black</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="next" href="../flipkart-black/"><span class="next-logo wide"><img src="../assets/logos/flipkart.svg" alt="" height="20"></span>Next<span class="next-name">: Flipkart Black</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"/></svg></button>
       </div>
     </div>
@@ -48,26 +51,12 @@
   <main id="main">
     <section class="slide" id="slide-1" aria-labelledby="s1-title" tabindex="-1">
       <div class="wrap">
-        <h2 class="s-title" id="s1-title">Investment advice stalled on regulation, so I proposed a narrower AI product that answers from your own documents</h2>
-        <p class="role"><b>Cent Capital</b> · AI Product Manager Intern · <span class="nw">Jun 2026 to Aug 2026</span></p>
+        <h2 class="s-title" id="s1-title">I proposed VaultLedger: private answers from your own financial documents, on your own computer</h2>
+        <div class="s-sub"><span class="logo logo-big square"><img src="../assets/logos/cent-capital.png" alt="Cent Capital logo" height="44"></span><p class="role"><b>Cent Capital</b> · AI Product Manager Intern · <span class="nw">Jun 2026 to Aug 2026</span></p></div>
         <div class="s-body">
           <div class="s-text">
-          <p class="lead">Plain-English questions about statements, invoices, pay stubs and 1099s, answered on your own computer. The data never leaves it.</p>
-          <div class="ledger">
-            <div>
-              <h3>What I owned</h3>
-              <ul>
-                <li>Idea and scope: no bank linking, no advice, synthetic data only</li>
-                <li>Spec and 24 written decision records</li>
-                <li>The build, with AI coding tools; weekly syncs with the co-founder</li>
-                <li>Test set and release gates</li>
-              </ul>
-            </div>
-            <div class="not">
-              <h3>Where it lives now</h3>
-              <p>Cent Capital owns the code: open-sourced under Apache-2.0, crediting me as the original author.</p>
-            </div>
-          </div>
+          <p class="lead">Cent Capital's first idea, an AI that recommends investments, meant private data under heavy regulation. I scoped something narrower and built it.</p>
+          <p class="chips"><span class="chip-k">Owned</span><span class="chip">Idea and scope</span><span class="chip">Spec and 24 decision records</span><span class="chip">The build</span><span class="chip">Test set and gates</span><span class="chip-k not">Now</span><span class="chip not">Cent Capital owns the code</span><span class="chip not">Apache-2.0</span></p>
           </div>
           <div class="s-ex-col"><figure class="exhibit">
             <figcaption class="ex-title"><span class="ex-no">Exhibit 1</span>The scope I proposed</figcaption>
@@ -95,6 +84,12 @@
             <p class="ex-source">Source: the product spec. Out of scope by decision: bank linking, real credentials, advice.</p>
           </figure><div class="s-actions"><a class="btn btn-solid" href="https://abhinavgupta0809.github.io/vaultledger-presentation/" target="_blank" rel="noopener">Full presentation</a><a class="btn" href="https://github.com/Cent-Capital/VaultLedger" target="_blank" rel="noopener">Code on GitHub</a></div></div>
         </div>
+        <details class="fold">
+          <summary>More detail</summary>
+          <div class="fold-body">
+            <p>Plain-English questions about statements, invoices, pay stubs and 1099s; the data never leaves your computer. Scope by decision: no bank linking, no advice, synthetic data only. Built with AI coding tools in weekly syncs with the co-founder. Cent Capital now owns the code, open-sourced under Apache-2.0, and credits me as the original author.</p>
+          </div>
+        </details>
       </div>
     </section>
     <section class="slide" id="slide-2" aria-labelledby="s2-title" tabindex="-1">
@@ -102,9 +97,7 @@
         <h2 class="s-title" id="s2-title">I set the bar before changing anything, and retrieval quality (MRR) rose from 0.50 to 0.79</h2>
         <div class="s-body flip">
           <div class="s-text">
-          <p class="lead">An 80-question test set with the expected source for each answer.</p>
-          <p>An AI judge checked against 20 of my own labels (a small check, weak evidence on its own), plus a regression check that fails the build if search quality drops.</p>
-          <p>Every result is tied to the exact code, settings and test set that produced it.</p>
+          <p class="lead">An 80-question test set with the expected source for each answer, and a regression check that fails the build if search quality drops.</p>
           </div>
           <figure class="exhibit">
             <figcaption class="ex-title"><span class="ex-no">Exhibit 2</span>How high the right source ranks (MRR) <span class="ex-unit">0 to 1, higher is better</span></figcaption>
@@ -133,6 +126,12 @@
             <p class="ex-source">Source: the 80-question test set, 70 answerable rows, on a 60-document synthetic corpus. Before means the retrieval in place before hybrid search and the reranker.</p>
           </figure>
         </div>
+        <details class="fold">
+          <summary>More detail</summary>
+          <div class="fold-body">
+            <p>An AI judge checked against 20 of my own labels (a small check, weak evidence on its own). Every result is tied to the exact code, settings and test set that produced it.</p>
+          </div>
+        </details>
       </div>
     </section>
     <section class="slide" id="slide-3" aria-labelledby="s3-title" tabindex="-1">
@@ -140,7 +139,7 @@
         <h2 class="s-title" id="s3-title">I rejected my own changes when they missed the bar</h2>
         <div class="s-body one">
           <div class="s-text">
-          <p>Six local models, a new prompt and a citation checker each ran against gates set in advance. Only the model already in use held.</p>
+          <p class="lead">Six local models, a new prompt and a citation checker each ran against gates set in advance. Only the model already in use held.</p>
           </div>
           <figure class="exhibit">
             <figcaption class="ex-title"><span class="ex-no">Exhibit 3</span>Three calls the preset gates made</figcaption>
@@ -166,7 +165,7 @@
         <h2 class="s-title" id="s4-title">It blocked 6 of 6 planted data leaks, and I stated what it can't prove yet</h2>
         <div class="s-body flip">
           <div class="s-text">
-          <p class="lead">These are measured, reproducible numbers, not a claim that it is production-ready.</p>
+          <p class="lead">Measured, reproducible numbers. Not a claim that it is production-ready.</p>
           </div>
           <figure class="exhibit">
             <figcaption class="ex-title"><span class="ex-no">Exhibit 4</span>Guardrails: what works, and what is not proven</figcaption>
