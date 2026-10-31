@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en" class="case-page">
+<html lang="en" class="case-page" data-case="vaultledger">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VaultLedger case study | Abhinav Gupta</title>
-  <meta name="description" content="VaultLedger, an on-device AI assistant for financial documents from my Cent Capital internship: how I set the bar, what I kept and what I rejected. Retrieval MRR 0.50 to 0.79.">
+  <meta name="description" content="VaultLedger: an on-device AI assistant for financial documents I proposed, scoped and built at Cent Capital, with preset release gates. Retrieval MRR 0.50 to 0.79; open-sourced by Cent Capital.">
   <meta property="og:title" content="VaultLedger case study | Abhinav Gupta">
-  <meta property="og:description" content="VaultLedger, an on-device AI assistant for financial documents from my Cent Capital internship: how I set the bar, what I kept and what I rejected. Retrieval MRR 0.50 to 0.79.">
+  <meta property="og:description" content="VaultLedger: an on-device AI assistant for financial documents I proposed, scoped and built at Cent Capital, with preset release gates. Retrieval MRR 0.50 to 0.79; open-sourced by Cent Capital.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://abhinavgupta0809.github.io/vaultledger/">
   <meta property="og:image" content="https://abhinavgupta0809.github.io/assets/og-vaultledger.png">
@@ -31,10 +31,10 @@
       <a class="back" href="../#work"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4 3 8l4 4"/></svg><span class="back-label">All work</span></a>
       <div class="deck-pos">
         <ol class="ticks" aria-label="Slides">
-          <li><a href="#slide-1" aria-label="Slide 1: The pivot"><span></span></a></li>
-          <li><a href="#slide-2" aria-label="Slide 2: How I decided what "good" means"><span></span></a></li>
-          <li><a href="#slide-3" aria-label="Slide 3: Decisions: what I kept and what I rejected"><span></span></a></li>
-          <li><a href="#slide-4" aria-label="Slide 4: Safety and limits"><span></span></a></li>
+          <li><a href="#slide-1" aria-label="Slide 1: Investment advice stalled on regulation, so I proposed a narrower AI product that answers from your own documents" title="Investment advice stalled on regulation, so I proposed a narrower AI product that answers from your own documents"><span></span></a></li>
+          <li><a href="#slide-2" aria-label="Slide 2: I set the bar before changing anything, and retrieval quality (MRR) rose from 0.50 to 0.79" title="I set the bar before changing anything, and retrieval quality (MRR) rose from 0.50 to 0.79"><span></span></a></li>
+          <li><a href="#slide-3" aria-label="Slide 3: I rejected my own changes when they missed the bar" title="I rejected my own changes when they missed the bar"><span></span></a></li>
+          <li><a href="#slide-4" aria-label="Slide 4: It blocked 6 of 6 planted data leaks, and I stated what it can't prove yet" title="It blocked 6 of 6 planted data leaks, and I stated what it can't prove yet"><span></span></a></li>
         </ol>
         <p class="count mono"><span class="visually-hidden">Slide </span><span data-current>1</span><span aria-hidden="true"> / </span><span class="visually-hidden"> of </span>4</p>
       </div>
@@ -45,192 +45,173 @@
     </div>
   </nav>
 
-  <header class="case-head">
-    <div class="wrap">
-      <p class="case-line mono">Cent Capital · AI Product Manager Intern · <span class="nw">Jun 2026 to Aug 2026</span></p>
-      <h1>VaultLedger: an <span class="nw">on-device</span> AI assistant for financial documents</h1>
-      <dl class="brief">
-          <div><dt class="mono">The bet</dt><dd>Build a narrower assistant that answers questions about your own financial documents, fully on your computer, instead of an AI that recommends investments.</dd></div>
-          <div><dt class="mono">What I did</dt><dd>Wrote the spec and the scope, built it with AI coding tools, and set the bar for every change before testing it.</dd></div>
-          <div><dt class="mono">What happened</dt><dd>Retrieval MRR rose from 0.50 to 0.79, 6 of 6 planted data leaks were blocked, and Cent Capital open-sourced it.</dd></div>
-      </dl>
-      <dl class="case-stats">
-          <div><dt>0.50 to 0.79</dt><dd>MRR</dd></div>
-          <div><dt>6 of 6</dt><dd>planted data leaks blocked</dd></div>
-          <div><dt>24</dt><dd>written decision records</dd></div>
-      </dl>
-      <div class="actions">
-        <a class="btn btn-solid" href="https://abhinavgupta0809.github.io/vaultledger-presentation/" target="_blank" rel="noopener">Full presentation</a>
-        <a class="btn" href="https://github.com/Cent-Capital/VaultLedger" target="_blank" rel="noopener">Code (open-sourced by Cent Capital)</a>
-      </div>
-    </div>
-  </header>
-
   <main id="main">
     <section class="slide" id="slide-1" aria-labelledby="s1-title" tabindex="-1">
       <div class="wrap">
-        <header class="slide-head">
-          <p class="slide-no mono" aria-hidden="true">01</p>
-          <h2 id="s1-title">The pivot</h2>
-        </header>
-        <div class="slide-grid">
-          <div class="slide-text">
-            <div class="pivot">
-              <div><p class="pivot-k mono">Asked for</p><p>An AI assistant that recommends investments</p></div>
-              <span class="pivot-arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
-              <div class="to"><p class="pivot-k mono">I proposed</p><p>Answers about your own financial documents, running fully on your computer</p></div>
+        <h2 class="s-title" id="s1-title">Investment advice stalled on regulation, so I proposed a narrower AI product that answers from your own documents</h2>
+        <p class="role"><b>Cent Capital</b> · AI Product Manager Intern · <span class="nw">Jun 2026 to Aug 2026</span></p>
+        <div class="s-body">
+          <div class="s-text">
+          <p class="lead">Plain-English questions about statements, invoices, pay stubs and 1099s, answered on your own computer. The data never leaves it.</p>
+          <div class="ledger">
+            <div>
+              <h3>What I owned</h3>
+              <ul>
+                <li>Idea and scope: no bank linking, no advice, synthetic data only</li>
+                <li>Spec and 24 written decision records</li>
+                <li>The build, with AI coding tools; weekly syncs with the co-founder</li>
+                <li>Test set and release gates</li>
+              </ul>
             </div>
-            <ul class="points">
-              <li>Cent Capital's idea meant handling people's private financial data under <strong>heavy regulation</strong>.</li>
-              <li>I proposed something narrower: plain-English questions about statements, invoices, pay stubs and 1099s. The data never leaves your computer. It is built to <strong>quote its source</strong> for each answer, and to <strong>refuse</strong> when it can't find support.</li>
-              <li>I wrote the spec and the scope (<strong>no bank linking, no advice, synthetic data only</strong>), worked weekly with the co-founder, and built it with AI coding tools.</li>
-              <li>Cent Capital has since <strong>open-sourced it</strong>, crediting me as the original author.</li>
-            </ul>
+            <div class="not">
+              <h3>Where it lives now</h3>
+              <p>Cent Capital owns the code: open-sourced under Apache-2.0, crediting me as the original author.</p>
+            </div>
           </div>
+          </div>
+          <div class="s-ex-col"><figure class="exhibit">
+            <figcaption class="ex-title"><span class="ex-no">Exhibit 1</span>The scope I proposed</figcaption>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 306" role="img" aria-labelledby="vp1-t vp1-d">
+<title id="vp1-t">What was asked for, and what I proposed</title>
+<desc id="vp1-d">Two boxes with an arrow between them. Asked for: an AI assistant that recommends investments, which meant private financial data under heavy regulation. I proposed: answers about your own financial documents, running fully on your computer.</desc>
+<defs><marker id="vp1-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrow" d="M0 0 10 5 0 10z"/></marker></defs>
+<g class="ghost"><rect class="box-ghost" x="1" y="20" width="272" height="272" rx="12"/>
+<text class="t-s" x="24" y="56">Asked for</text>
+<text class="t-h" x="24" y="98">An AI assistant</text>
+<text class="t-h" x="24" y="128">that recommends</text>
+<text class="t-h" x="24" y="158">investments</text>
+<text class="t-b" x="24" y="206">Private financial data,</text>
+<text class="t-b" x="24" y="232">heavy regulation</text></g>
+<path class="s-case2" d="M284 148 H344" marker-end="url(#vp1-a)"/>
+<rect class="box-case" x="367" y="20" width="272" height="272" rx="12"/>
+<text class="t-s t-case" x="390" y="56">I proposed</text>
+<text class="t-h" x="390" y="98">Answers from</text>
+<text class="t-h" x="390" y="128">your own</text>
+<text class="t-h" x="390" y="158">documents</text>
+<text class="t-b" x="390" y="206">On your computer.</text>
+<text class="t-b" x="390" y="232">No bank linking.</text>
+<text class="t-b" x="390" y="258">No advice.</text>
+</svg>
+            <p class="ex-source">Source: the product spec. Out of scope by decision: bank linking, real credentials, advice.</p>
+          </figure><div class="s-actions"><a class="btn btn-solid" href="https://abhinavgupta0809.github.io/vaultledger-presentation/" target="_blank" rel="noopener">Full presentation</a><a class="btn" href="https://github.com/Cent-Capital/VaultLedger" target="_blank" rel="noopener">Code on GitHub</a></div></div>
         </div>
       </div>
     </section>
     <section class="slide" id="slide-2" aria-labelledby="s2-title" tabindex="-1">
       <div class="wrap">
-        <header class="slide-head">
-          <p class="slide-no mono" aria-hidden="true">02</p>
-          <h2 id="s2-title">How I decided what "good" means</h2>
-        </header>
-        <div class="slide-grid">
-          <div class="slide-text">
-            <ul class="points">
-              <li>An <b class="num">80-question</b> test set with the expected source for each answer.</li>
-              <li>An AI judge, checked against <b class="num">20</b> of my own labels (a small check, so weak evidence on its own), plus a regression check that <strong>fails the build</strong> if search quality drops.</li>
-              <li>Every result tied to the exact code, settings and test set that produced it.</li>
-              <li>Hybrid search plus a reranker raised MRR (how high the right source ranks) from <b class="num">0.50 to 0.79</b>.</li>
-            </ul>
-            <figure class="bars">
-              <div class="bar"><span class="bar-l">Before</span><span class="bar-track"><span class="bar-fill" style="--v:.50"></span></span><span class="bar-v">0.50</span></div>
-              <div class="bar after"><span class="bar-l">Hybrid search + reranker</span><span class="bar-track"><span class="bar-fill" style="--v:.79"></span></span><span class="bar-v">0.79</span></div>
-              <figcaption>MRR: how high the right source ranks. Bars drawn on a 0 to 1 scale.</figcaption>
-            </figure>
+        <h2 class="s-title" id="s2-title">I set the bar before changing anything, and retrieval quality (MRR) rose from 0.50 to 0.79</h2>
+        <div class="s-body flip">
+          <div class="s-text">
+          <p class="lead">An 80-question test set with the expected source for each answer.</p>
+          <p>An AI judge checked against 20 of my own labels (a small check, weak evidence on its own), plus a regression check that fails the build if search quality drops.</p>
+          <p>Every result is tied to the exact code, settings and test set that produced it.</p>
           </div>
+          <figure class="exhibit">
+            <figcaption class="ex-title"><span class="ex-no">Exhibit 2</span>How high the right source ranks (MRR) <span class="ex-unit">0 to 1, higher is better</span></figcaption>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" role="img" aria-labelledby="vb2-t vb2-d">
+<title id="vb2-t">How high the right source ranks, before and after hybrid search with a reranker</title>
+<desc id="vb2-d">Two columns on a 0 to 1 scale: mean reciprocal rank 0.50 before, 0.79 after hybrid search plus a reranker, on an 80-question test set.</desc>
+<defs><marker id="vb2-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="arrow" d="M0 0 10 5 0 10z"/></marker></defs>
+<path class="s-hair" d="M70 300 H630"/>
+<text class="t-s" x="60" y="307" text-anchor="end">0</text>
+<path class="s-hair" d="M70 170 H630"/>
+<text class="t-s" x="60" y="177" text-anchor="end">0.5</text>
+<path class="s-hair" d="M70 40 H630"/>
+<text class="t-s" x="60" y="47" text-anchor="end">1.0</text>
+<path class="s-line" d="M70 300 H630"/>
+<path class="f-dim" d="M170 300 V174.0 Q170 170.0 174 170.0 H266 Q270 170.0 270 174.0 V300 Z"/>
+<text class="t-num" x="220" y="154" text-anchor="middle">0.50</text>
+<text class="t-h" x="220" y="336" text-anchor="middle">Before</text>
+<path class="f-case" d="M430 300 V98.6 Q430 94.6 434 94.6 H526 Q530 94.6 530 98.6 V300 Z"/>
+<text class="t-num on" x="480" y="79" text-anchor="middle">0.79</text>
+<text class="t-h" x="480" y="336" text-anchor="middle">After</text>
+<text class="t-m" x="480" y="364" text-anchor="middle">hybrid search + reranker</text>
+<path class="s-dash" d="M280 170 H330"/>
+<path class="s-case2" d="M330 170 V103" marker-end="url(#vb2-a)"/>
+<text class="t-h t-case" x="342" y="141">+0.29</text>
+</svg>
+            <p class="ex-source">Source: the 80-question test set, 70 answerable rows, on a 60-document synthetic corpus. Before means the retrieval in place before hybrid search and the reranker.</p>
+          </figure>
         </div>
       </div>
     </section>
     <section class="slide" id="slide-3" aria-labelledby="s3-title" tabindex="-1">
       <div class="wrap">
-        <header class="slide-head">
-          <p class="slide-no mono" aria-hidden="true">03</p>
-          <h2 id="s3-title">Decisions: what I kept and what I rejected</h2>
-        </header>
-        <div class="slide-grid has-fig">
-          <div class="slide-text">
-            <aside class="decision" aria-label="Decision">
-              <p class="decision-label mono">Decision</p>
-              <p class="call">Set the bar before the test, and don't ship a change that fails it.</p>
-              <ul class="options">
-                <li><span class="verdict kept">Kept</span><span>The 8B model already in use. Six local models, including the 8B, compared on <b class="num">480</b> scored answers; none beat the 8B.</span></li>
-                <li><span class="verdict not">Not adopted</span><span>The five alternative models.</span></li>
-                <li><span class="verdict rejected">Rejected</span><span>A new prompt. It passed <b class="num">5 of 6</b> preset checks but turned 3 refusals into wrong answers.</span></li>
-                <li><span class="verdict rejected">Rejected</span><span>A citation checker. It retracted <b class="num">28</b> answers that were already correct.</span></li>
-              </ul>
-            </aside>
-            <ul class="points">
-              <li>A prototype agent with calculator and SQL tools did better on cross-document totals with the 8B model (17% to 58%, on just 12 questions) but worse with the smaller 4B model. It stayed a prototype; the shipped product uses hybrid search.</li>
-            </ul>
+        <h2 class="s-title" id="s3-title">I rejected my own changes when they missed the bar</h2>
+        <div class="s-body one">
+          <div class="s-text">
+          <p>Six local models, a new prompt and a citation checker each ran against gates set in advance. Only the model already in use held.</p>
           </div>
-            <figure class="figure slide-fig">
-              <div class="fig"><svg xmlns="http://www.w3.org/2000/svg" class="dg" viewBox="0 0 720 446" width="100%" role="img" aria-labelledby="vg-t vg-d" style="display:block;max-width:100%;height:auto">
-<title id="vg-t">VaultLedger release gate</title>
-<desc id="vg-d">A proposed change runs on the 80-question test set with an AI judge, and is compared with a bar set before the test; it ships or is rejected. Three calls the bar made: six local models compared on 480 scored answers, none beat the 8B, so I kept the 8B; a new prompt turned 3 refusals into wrong answers, rejected; a citation checker retracted 28 answers that were correct, rejected. Diagram of the release process.</desc>
-<style>
-.dg{font-family:var(--sans,Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif)}
-.dg text{fill:var(--ink,#17181a)}
-.dg .h{font-size:24px;font-weight:600}
-.dg .h2{font-size:26px;font-weight:600}
-.dg .b{font-size:22px;fill:var(--body,#3b3d42)}
-.dg .m{font-size:22px;fill:var(--muted,#62656c)}
-.dg .eb{font-size:22px;font-weight:700;letter-spacing:.08em;fill:var(--red,#C41230)}
-.dg .num{font-family:var(--serif,"Source Serif 4",Georgia,serif);font-weight:700}
-.dg .r{fill:var(--red,#C41230)}
-.dg .w{fill:#fff}
-.dg .ln{stroke:var(--muted,#62656c);stroke-width:2;fill:none}
-.dg .lnr{stroke:var(--red,#C41230);stroke-width:2;fill:none}
-.dg .rule{stroke:var(--line,#e4e2de);stroke-width:1.5;fill:none}
-.dg .bx{fill:var(--card,#fff);stroke:#d3cfc8;stroke-width:1.5}
-.dg .bxr{fill:var(--red-tint,#fbecee);stroke:var(--red-line,#efc9d0);stroke-width:1.5}
-.dg .fr{fill:var(--red,#C41230)}
-.dg .fi{fill:var(--ink,#17181a)}
-.dg .fg{fill:#e4e2de}
-.dg .ft{fill:var(--red-tint,#fbecee)}
-.dg .dot{fill:var(--card,#fff);stroke:var(--red,#C41230);stroke-width:2.5}
-.dg .ah{fill:var(--muted,#62656c)}
-</style>
-<defs><marker id="vg-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0 0 10 5 0 10z"/></marker></defs>
-<rect class="bx" x="1" y="20" width="150" height="96" rx="10"/>
-<text class="h" x="76" y="62" text-anchor="middle">Change</text>
-<text class="h" x="76" y="90" text-anchor="middle">proposed</text>
-<path class="ln" d="M152 68 H178" marker-end="url(#vg-a)"/>
-<rect class="bx" x="182" y="20" width="172" height="96" rx="10"/>
-<text class="h" x="268" y="52" text-anchor="middle">80-question</text>
-<text class="b" x="268" y="79" text-anchor="middle">test set and</text>
-<text class="b" x="268" y="104" text-anchor="middle">an AI judge</text>
-<path class="ln" d="M355 68 H381" marker-end="url(#vg-a)"/>
-<rect class="bxr" x="385" y="20" width="150" height="96" rx="10"/>
-<text class="h r" x="460" y="52" text-anchor="middle">Preset bar</text>
-<text class="b" x="460" y="79" text-anchor="middle">set before</text>
-<text class="b" x="460" y="104" text-anchor="middle">the test</text>
-<path class="ln" d="M536 68 H542 M542 36 V100"/>
-<path class="ln" d="M542 36 H557" marker-end="url(#vg-a)"/>
-<path class="ln" d="M542 100 H557" marker-end="url(#vg-a)"/>
-<rect class="fi" x="559" y="14" width="160" height="44" rx="22"/>
-<text class="w" x="639" y="44" font-size="22" font-weight="700" text-anchor="middle">Ship</text>
-<rect class="bxr" x="559" y="78" width="160" height="44" rx="22"/>
-<text class="r" x="639" y="108" font-size="22" font-weight="700" text-anchor="middle">Reject</text>
-<path class="rule" d="M0 156 H720"/>
-<text class="eb" x="0" y="194">THREE CALLS THE BAR MADE</text>
-<text class="h" x="0" y="240">Six local models</text>
-<text class="b" x="0" y="270">480 scored answers; none beat the 8B</text>
-<rect class="fi" x="559" y="224" width="160" height="44" rx="22"/>
-<text class="w" x="639" y="254" font-size="22" font-weight="700" text-anchor="middle">Kept the 8B</text>
-<path class="rule" d="M0 286 H720"/>
-<text class="h" x="0" y="320">New prompt</text>
-<text class="b" x="0" y="350">3 refusals became wrong answers</text>
-<rect class="bxr" x="559" y="304" width="160" height="44" rx="22"/>
-<text class="r" x="639" y="334" font-size="22" font-weight="700" text-anchor="middle">Rejected</text>
-<path class="rule" d="M0 366 H720"/>
-<text class="h" x="0" y="400">Citation checker</text>
-<text class="b" x="0" y="430">Retracted 28 answers that were correct</text>
-<rect class="bxr" x="559" y="384" width="160" height="44" rx="22"/>
-<text class="r" x="639" y="414" font-size="22" font-weight="700" text-anchor="middle">Rejected</text>
-</svg></div>
-              <figcaption>Diagram of the release process.</figcaption>
-            </figure>
+          <figure class="exhibit">
+            <figcaption class="ex-title"><span class="ex-no">Exhibit 3</span>Three calls the preset gates made</figcaption>
+            <aside class="decision" aria-label="The call">
+            <h3>The call</h3>
+            <p class="call">Set the bar before the test, and don't ship a change that fails it. The model was not beaten, which is not the same as best.</p>
+          </aside>
+            <table class="ex-table">
+              <thead><tr><th scope="col">Verdict</th><th scope="col">Change</th><th scope="col">What the preset gate found</th></tr></thead>
+              <tbody>
+                <tr><td><span class="verdict kept">Kept</span></td><td><b>The 8B model already in use</b></td><td>Six local models, <b>80</b> questions each; none beat it.<span class="gate">The two that tied took 3.7 to 4.4x longer per answer (median).</span></td></tr>
+                <tr class="ghost"><td><span class="verdict rejected">Rejected</span></td><td><b>A new prompt</b></td><td>Passed <b>5 of 6</b> preset checks.<span class="gate">Failed the one that mattered: it turned 3 refusals into wrong answers.</span></td></tr>
+                <tr class="ghost"><td><span class="verdict rejected">Rejected</span></td><td><b>A citation checker</b></td><td>Retracted <b>28</b> answers that were already correct.<span class="gate">Zero false retractions was the bar.</span></td></tr>
+              </tbody>
+            </table>
+            <p class="ex-source">Source: the decision records in the repo.</p>
+          </figure>
         </div>
       </div>
     </section>
     <section class="slide" id="slide-4" aria-labelledby="s4-title" tabindex="-1">
       <div class="wrap">
-        <header class="slide-head">
-          <p class="slide-no mono" aria-hidden="true">04</p>
-          <h2 id="s4-title">Safety and limits</h2>
-        </header>
-        <div class="slide-grid">
-          <div class="slide-text">
-            <ul class="points">
-              <li><strong>Guardrails:</strong> personal details masked and restored exactly, number checks against the source, and isolation between test personas.</li>
-              <li>Blocked <b class="num">6 of 6</b> planted data leaks.</li>
-              <li><strong>Limits:</strong> the test set and documents are synthetic and self-written, there are no real users yet, and over-refusal was not meaningfully tested. These are measured, reproducible numbers, not a claim that it is production-ready.</li>
-            </ul>
+        <h2 class="s-title" id="s4-title">It blocked 6 of 6 planted data leaks, and I stated what it can't prove yet</h2>
+        <div class="s-body flip">
+          <div class="s-text">
+          <p class="lead">These are measured, reproducible numbers, not a claim that it is production-ready.</p>
           </div>
+          <figure class="exhibit">
+            <figcaption class="ex-title"><span class="ex-no">Exhibit 4</span>Guardrails: what works, and what is not proven</figcaption>
+            <div class="cols">
+              <div>
+                <h3>Working, and measured</h3>
+                <p class="big">6 of 6<small>planted data leaks blocked</small></p>
+                <ul>
+                  <li>Personal details masked and restored exactly</li>
+                  <li>Number checks against the source</li>
+                  <li>Isolation between test personas</li>
+                </ul>
+              </div>
+              <div class="not">
+                <h3>Not proven yet</h3>
+                <ul>
+                  <li>The test set and documents are synthetic and self-written</li>
+                  <li>No real users yet</li>
+                  <li>Over-refusal was not meaningfully tested</li>
+                </ul>
+              </div>
+            </div>
+            <p class="ex-source">Source: the guardrail test suite in the repo.</p>
+          </figure>
         </div>
       </div>
     </section>
 
     <section class="more" aria-labelledby="more-title">
       <div class="wrap">
-        <h2 id="more-title">The full presentation and the code</h2>
+        <h2 id="more-title">More from Cent Capital</h2>
+        <div class="more-grid two">
+          <article class="more-card">
+            <h3>A prototype agent, kept as a prototype</h3>
+            <p>An agent with calculator and SQL tools did better on cross-document totals with the 8B model (17% to 58%, on just 12 questions) and worse with the smaller 4B model. The shipped product uses hybrid search.</p>
+          </article>
+          <article class="more-card">
+            <h3>A null result, written up</h3>
+            <p>Six temperature and top-p settings against the baseline: all seven passed the same strict rows. A null on this task and corpus, with one seed and one model, not a claim that decoding never matters.</p>
+          </article>
+        </div>
         <article class="artifact">
-          <a class="shot" href="https://abhinavgupta0809.github.io/vaultledger-presentation/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../assets/vault.jpg" alt="" width="960" height="600" loading="lazy"></a>
           <div class="artifact-body">
-            <h3>VaultLedger final presentation</h3>
-            <p>The full deck from my Cent Capital internship, and the code, which Cent Capital has open-sourced.</p>
+            <h3>The full presentation and the code</h3>
+            <p>The deck from my Cent Capital internship, and the repo, which Cent Capital has open-sourced.</p>
             <p class="row-links"><a href="https://abhinavgupta0809.github.io/vaultledger-presentation/" target="_blank" rel="noopener">Open the presentation</a><a href="https://github.com/Cent-Capital/VaultLedger" target="_blank" rel="noopener">Code on GitHub</a></p>
           </div>
         </article>
@@ -241,7 +222,7 @@
         <p class="rounded mono">Numbers are rounded.</p>
         <nav class="pager" aria-label="Other case studies">
           <a class="prev" href="../tata-1mg/"><span class="k mono">Previous case</span><span class="t">Tata 1mg: $145K a year saved, GenAI video in 15+ languages</span></a>
-          <a class="next" href="../flipkart-black/"><span class="k mono">Next case</span><span class="t">Flipkart Black: ~500K paid members in four months</span></a>
+          <a class="next" href="../flipkart-black/"><span class="k mono">Next case</span><span class="t">Flipkart Black: 500K paid members in four months</span></a>
         </nav>
         <p class="pager-all"><a href="../#work">All case studies</a></p>
       </div>

@@ -14,9 +14,9 @@ Plain HTML, CSS and JS with no build step. GitHub Pages serves `main` from the r
   5. Path (`#path`): one line per role with dates, case links, education, and the CV download.
   6. About (`#about`) and the footer (`#contact`, with "Last updated").
   Old links still land: `#pm` goes to Selected work, `#builder`, `#other-work` and `#teardown` to Builds, `#experience` to Path, and the old card and build ids are kept.
-- `flipkart-black/`, `meesho/`, `tata-1mg/`, `vaultledger/`: one case study each, as `index.html`. Each has a deck bar (back to all work, tick marks and a "1 / 4" counter, next case, theme toggle), a header with "The bet / What I did / What happened" and three stats, four full-height slides, optional "More from" cards, and previous / next links.
+- `flipkart-black/`, `meesho/`, `tata-1mg/`, `vaultledger/`: one case study each, as `index.html`, rebuilt 2026-10-30 as four-slide consulting decks. Each page has a deck bar (back to all work, tick marks and a "1 / 4" counter, next case, theme toggle) and four full-height slides; there is no separate header block. Every slide is a full-sentence action title (the four titles alone tell the story), a short text column, one exhibit (inline SVG or an HTML table) with an "Exhibit n" caption and a source line, and a provenance stamp that says how a number was measured and whose result it was. Slide 1 carries the result, the role line and the "What I owned / Not mine" ledger. Each case has its own accent, scoped by `data-case` on `<html>` (Flipkart cobalt, Meesho magenta, Tata 1mg teal, VaultLedger ochre); Carnegie red stays on the site chrome. Below the deck: optional "More from" cards and previous / next links.
 - `styles.css`: color tokens (light and dark), type, and the home page. Carnegie red (`#C41230`) is the only accent. Fonts: Source Serif 4, Inter, JetBrains Mono.
-- `case.css`: case page layout. Slides snap gently on desktop only (`scroll-snap-type: y proximity`); phones scroll normally. Printing a case page gives one slide per page.
+- `case.css`: case page layout and the per-case accent tokens. Slides snap gently on desktop only (`scroll-snap-type: y proximity`) and each fills the viewport below the deck bar at 1280x720 and up; phones scroll normally with the exhibit above the text. Printing a case page gives four landscape pages plus one for "More from".
 - `theme.js`: the light / dark toggle. It follows the system setting until a visitor picks one, then remembers the choice in `localStorage`. Each page has a one-line script in `<head>` that applies a saved choice before first paint.
 - `script.js`: home page copy-email button, email menu and nav highlighting.
 - `case.js`: the slide counter and tick marks, and arrow keys / PageUp / PageDown to move between slides.
@@ -26,16 +26,15 @@ Diagrams are inline SVGs inside `<div class="fig">`. The panel keeps light color
 
 Preview locally: `python3 -m http.server 8770`, then open http://localhost:8770.
 
-## Adding a case study
+## Adding or editing a case study
 
-1. Copy a case folder, for example `cp -r meesho new-case`, and edit `new-case/index.html`:
-   - `<title>`, the meta description, the `og:` tags and `og:image`.
-   - The header: the company · role · dates line, the `<h1>`, the three "brief" rows and the three stats.
-   - The four `<section class="slide">` blocks. Keep ids `slide-1` to `slide-4` and update the tick links in the deck bar to match. Each slide has a short `<h2>`, a `<ul class="points">` of at most five short bullets, and optionally a `<figure class="figure slide-fig">` with a diagram. Wrap key numbers in `<b class="num">`.
-   - Reusable parts: `<aside class="decision">` for a decision (add `<ul class="options">` only for options that were really weighed), `<dl class="results">`, and `<div class="split">` for what I owned and what I didn't.
-2. Fix the links around it: the "Next" link in the deck bar and the previous / next cards at the bottom of the new page and its neighbours.
-3. Add a card to Selected work in `index.html` (copy an `<article class="work-card">`), a "Case study" link on its Path row, and a share image at `assets/og-new-case.png`.
-4. Every number must already be on the CV or in the source notes. The footer line on each case page says "Numbers are rounded."
+The four case pages are generated. Edit `build_v3.py` in `~/Desktop/Profile Audit 2026-10-29/03-portfolio/generator/` (copy and exhibits live there as Python strings and small SVG builders), then run `python3 -I build_v3.py`; it writes the four `index.html` files here. `build_v2.py` in the same folder still generates the home page. `case.css`, `case.js` and `styles.css` are edited by hand.
+
+Rules for the decks:
+- Four slides. Each has one full-sentence title (under about 16 words) that states the takeaway, one exhibit, and at most a few short paragraphs. Slide 1 carries the result, the role line, the owned / not-mine ledger and a stamp.
+- Every number must already be in the checked-claims ledger or the master bank. No "~" before a number on a slide; the footer line "Numbers are rounded." covers rounding. Each number gets a source line or a stamp saying how it was measured (controlled test, pre/post, combined result, team result, launch count).
+- Exhibits are inline SVG on a 640-wide viewBox with text at 20px or larger (so it stays legible at phone width), or an HTML table. They use the theme tokens and the case accent (`--case`), so dark mode gets dark panels. Anything resembling a product screen is captioned "Illustration, redrawn. Not the product UI."
+- Keep the slide ids `slide-1` to `slide-4`: the home page links into them.
 
 To add a build, copy an `<li class="row">` in `index.html`.
 
