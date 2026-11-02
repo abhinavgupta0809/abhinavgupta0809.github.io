@@ -1,28 +1,9 @@
-// Home page: copy-email button with a small menu of other email options, and nav highlighting.
-// Old links from earlier versions still land: #about is About, #pm is Selected work, #builder and
-// #other-work are Builds, #experience is Path, and the old card and build ids are kept.
+// Home page: email button with a small menu of other email options, and nav highlighting.
+// Old links from earlier versions still land: #about is About, #pm is Selected work, #builds, #builder and
+// #other-work are Personal projects, #experience is Path, and the old card and build ids are kept.
 
-// Copy email, plus the menu (mail app, Gmail, Outlook) as a secondary option.
+// The menu (mail app, Gmail, Outlook) is the secondary option to the Email link.
 (function () {
-  var address = 'agupta7@andrew.cmu.edu';
-
-  Array.prototype.slice.call(document.querySelectorAll('[data-copy-email]')).forEach(function (btn) {
-    var text = btn.querySelector('.label');
-    var original = text ? text.textContent : '';
-    function done() {
-      if (!text) return;
-      text.textContent = 'Copied';
-      setTimeout(function () { text.textContent = original; }, 1600);
-    }
-    btn.addEventListener('click', function () {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(address).then(done, function () { window.prompt('Copy this address:', address); });
-      } else {
-        window.prompt('Copy this address:', address);
-      }
-    });
-  });
-
   var groups = Array.prototype.slice.call(document.querySelectorAll('.split-btn'));
   groups.forEach(function (group) {
     var btn = group.querySelector('button[aria-controls]');

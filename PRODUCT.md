@@ -14,7 +14,7 @@ Primary: a recruiter or sourcer (big tech, AI labs, consumer marketplaces) who o
 
 ## Product Purpose
 
-Abhinav Gupta's portfolio site: four case studies (Flipkart Black, Meesho, Tata 1mg, VaultLedger), a Builds list, a How I work list, the Path and the CV download. Success: the reader can retell each case from its headlines, sees the decisions Abhinav made (not only what the team shipped), and trusts the numbers because ownership and measurement are labeled honestly. The audit's bar: a recruiter who reads only the slide headlines gets the story; a hiring manager sees the decisions.
+Abhinav Gupta's portfolio site: four case studies (Flipkart Black, Meesho, Tata 1mg, VaultLedger), a Personal projects list, a How I work list, the Path and the CV download. Success: the reader can retell each case from its headlines, sees the decisions Abhinav made (not only what the team shipped), and trusts the numbers because ownership and measurement are labeled honestly. The audit's bar: a recruiter who reads only the slide headlines gets the story; a hiring manager sees the decisions.
 
 ## Positioning
 
@@ -27,7 +27,7 @@ Static HTML, CSS and JS on GitHub Pages, served from `main` at the repo root; no
 ## Capabilities and Constraints
 
 - Every number, scope and ownership statement must already exist in the checked-claims ledger (`04-final-package/highlights-ledger.md`) or the master bank (`~/Desktop/Projects/job-search-os/context-library/master-bank/`). No new facts, no invented rules, no invented reflections.
-- Keep off: 170% member GMV; the unconfirmed ~20M Treats members; Meesho repeat-abuse percentages and the fraud signals; the -9% churn figure; Netflix declining first; the internal tool's name; YouTube Premium and Netflix under one activation number; "launched 0 to 1" for Black (it was a relaunch); "best model" or "production-ready" for VaultLedger; any latency ranking; the LLM judge as strong evidence.
+- Keep off: 170% member GMV; Meesho repeat-abuse percentages and the fraud signals; the -9% churn figure; Netflix declining first; the internal tool's name; YouTube Premium and Netflix under one activation number; "launched 0 to 1" for Black (it was a relaunch); "best model" or "production-ready" for VaultLedger; any latency ranking; the LLM judge as strong evidence.
 - Ownership words stay honest: pricing and eligibility at Flipkart and the 10% pilot decision at Tata 1mg were not his; team results are labeled as team results.
 - No "~", "about" or "nearly" before a number on slides (CV rule); the "Numbers are rounded." line stays on each page. Durations in the story ("about three hours") may keep the word.
 - Writing: plain English, first person, contractions allowed, no em or en dashes anywhere (text, code, comments), never: delve, landscape, synergy, leverage, robust, streamline, cutting-edge, spearheaded, pioneered, orchestrated. No engineering jargon in headlines.
