@@ -40,6 +40,6 @@ To add a personal project, copy an `<li class="row">` in `index.html`.
 
 ## CV PDF
 
-`assets/Abhinav-Gupta-CV.pdf` is the AI PM sample CV (v7, 2026-10-28). Its source is `tools/cv-builder/build_master.py` in the job-search-os repo; the rendered copies live in `~/Desktop/CV/v7/`. To update it, rebuild there and copy `Abhinav_Gupta_AI_PM_andrew.pdf` over this file.
+`assets/Abhinav-Gupta-CV.pdf` is the CV built for the Anthropic Claude Marketplace PM role (2026-11-02, Tepper email). The source copy is `07-submission/cv/Tepper/` in `~/Desktop/Anthropic job application/`. To update it, rebuild there and copy the PDF over this file. The general AI PM versions are in `~/Desktop/CV/v7/`.
 
 `tools/build-cv.py` and `tools/cv-body.html` are the older site CV pipeline, kept for reference.
