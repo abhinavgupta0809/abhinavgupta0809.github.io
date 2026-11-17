@@ -36,7 +36,7 @@ Rules for the decks:
 - Exhibits are inline SVG on a 640-wide viewBox with text at 20px or larger (so it stays legible at phone width), or an HTML table. They use the theme tokens and the case accent (`--case`), so dark mode gets dark panels. Anything resembling a product screen is captioned "Illustration, redrawn. Not the product UI."
 - Keep the slide ids `slide-1` to `slide-4`: the home page links into them.
 
-To add a personal project, copy an `<li class="row">` in `index.html`. The first row (2026-11-03) is the Claude Marketplace work sample; its thesis, prototype and dashboard live on Vercel, and their numbers must match those sites.
+To add a personal project, copy an `<li class="row">` in `index.html`. The home page is now edited by hand: `build_v2.py` doesn't know about the rows added since 2026-11-03 (Claude Marketplace, Wayfair, Snapchat, Wispr Flow) and would overwrite them. Every project deployed to Vercel gets a row or a line in the dashboards list, except the unlisted (noindex) ones. The first row (2026-11-03) is the Claude Marketplace work sample; its thesis, prototype and dashboard live on Vercel, and their numbers must match those sites.
 
 ## CV PDF
 
